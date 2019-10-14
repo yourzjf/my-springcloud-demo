@@ -9,3 +9,41 @@ spring:
   jackson:
     date-format: yyyy-MM-dd HH:mm:ss
     time-zone: Asia/Shanghai
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3307/demo_userserver?useUnicode=true&characterEncoding=utf8&useSSL=false&serverTimezone=Hongkong
+    username: demo_userserver
+    password: demo_userserver
+    type: com.zaxxer.hikari.HikariDataSource
+    hikari:
+      minimum-idle: 2
+      maximum-pool-size: 10
+      idle-timeout: 30000
+      max-lifetime: 1800000
+      connection-timeout: 30000
+      connection-test-query: select 'x'
+mybatis:
+  mapper-locations:
+  - classpath:mapper/**/*Mapper.xml
+  configuration:
+    cache-enabled: true
+    lazy-loading-enabled: true
+    multiple-result-sets-enabled: true
+    use-column-label: true
+    use-generated-keys: false
+    auto-mapping-behavior: partial
+    default-executor-type: simple
+    default-statement-timeout: 25
+    safe-row-bounds-enabled: false
+    map-underscore-to-camel-case: false
+    local-cache-scope: session
+    jdbc-type-for-null: 'null'
+    lazy-load-trigger-methods:
+    - equals
+    - clone
+    - hashCode
+    - toString
+pagehelper:
+  helper-dialect: mysql
+  page-size-zero: 'true'
+  reasonable: true
