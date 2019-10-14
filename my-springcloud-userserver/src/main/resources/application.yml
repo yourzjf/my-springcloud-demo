@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: userserver
+  http:
+    encoding:
+      enabled: true
+      force: true
+      charset: UTF-8
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: Asia/Shanghai
