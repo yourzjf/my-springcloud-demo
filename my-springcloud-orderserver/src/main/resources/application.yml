@@ -1,6 +1,6 @@
 spring:
   application:
-    name: userserver
+    name: orderserver
   devtools:
     restart:
       trigger-file: devtoolstrigger.txt
@@ -14,9 +14,9 @@ spring:
     time-zone: Asia/Shanghai
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://127.0.0.1:3307/demo_userserver?useUnicode=true&characterEncoding=utf8&useSSL=false&serverTimezone=Hongkong
-    username: demo_userserver
-    password: demo_userserver
+    url: jdbc:mysql://127.0.0.1:3307/demo_orderserver?useUnicode=true&characterEncoding=utf8&useSSL=false&serverTimezone=Hongkong
+    username: demo_orderserver
+    password: demo_orderserver
     type: com.zaxxer.hikari.HikariDataSource
     hikari:
       minimum-idle: 2
