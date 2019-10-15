@@ -1,8 +1,10 @@
 server:
   port: 8010
 spring:
-  application:
-    name: userserver
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
   devtools:
     restart:
       trigger-file: devtoolstrigger.txt
@@ -52,7 +54,8 @@ pagehelper:
   helper-dialect: mysql
   page-size-zero: 'true'
   reasonable: true
-eureka:
-  client:
-    service-url:
-      defaultZone: http://localhost:8761/eureka
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
