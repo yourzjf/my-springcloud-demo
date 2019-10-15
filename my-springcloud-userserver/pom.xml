@@ -42,6 +42,10 @@
             <groupId>net.yourzjf.springcloud</groupId>
             <artifactId>my-springcloud-userserver-api</artifactId>
         </dependency>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+        </dependency>
 
         <!-- tools -->
         <dependency>

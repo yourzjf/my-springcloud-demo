@@ -4,7 +4,7 @@ import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 
-@FeignClient("spring-cloud-provider")
+@FeignClient(value = "userserver", contextId = "simpleRemote")
 public interface SimpleRemote {
 
     @GetMapping("/hello/{name}")

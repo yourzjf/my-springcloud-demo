@@ -16,6 +16,7 @@
         <module>my-springcloud-userserver-api</module>
         <module>my-springcloud-gateway</module>
         <module>my-springcloud-orderserver</module>
+        <module>my-springcloud-eureka</module>
     </modules>
 
     <developers>

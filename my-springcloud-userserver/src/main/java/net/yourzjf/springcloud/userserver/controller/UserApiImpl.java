@@ -5,6 +5,7 @@ import java.util.List;
 import java.util.Objects;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.atomic.AtomicInteger;
+import java.util.stream.Collectors;
 
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -70,9 +71,10 @@ public class UserApiImpl implements UserApi {
     }
 
     @Override
-    public List<User> query(@RequestParam String name) {
+    public List<User> query(@RequestParam final String name) {
         System.out.println("query " + name);
-        name = Objects.requireNonNull(name);
-        return new ArrayList<>(users.values());
+        Objects.requireNonNull(name);
+        return new ArrayList<>(
+                users.values().stream().filter(u -> u.getName().equals(name)).collect(Collectors.toList()));
     }
 }

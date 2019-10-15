@@ -4,5 +4,5 @@ import org.springframework.cloud.openfeign.FeignClient;
 
 import net.yourzjf.springcloud.userserver.api.UserApi;
 
-@FeignClient("spring-cloud-provider")
+@FeignClient(value = "userserver", contextId = "userRemote")
 public interface UserRemote extends UserApi {}
