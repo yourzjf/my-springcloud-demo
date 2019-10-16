@@ -56,3 +56,6 @@ pagehelper:
   helper-dialect: mysql
   page-size-zero: 'true'
   reasonable: true
+feign:
+  hystrix:
+    enabled: true
