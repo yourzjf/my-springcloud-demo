@@ -10,7 +10,7 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <spring.boot.version>2.1.8.RELEASE</spring.boot.version>
+        <spring.boot.version>2.2.1.RELEASE</spring.boot.version>
     </properties>
 
     <dependencyManagement>
@@ -27,7 +27,7 @@
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-dependencies</artifactId>
-                <version>Greenwich.RELEASE</version>
+                <version>Greenwich.SR4</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
